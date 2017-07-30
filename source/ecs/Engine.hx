@@ -21,6 +21,7 @@ class Engine extends FlxGroup {
         var entity = new Entity();
         entity.engine = this;
         entities.add(entity);
+        forEachSystem(s -> s.entityAdded(entity));
         return entity;
     }
 
@@ -28,6 +29,10 @@ class Engine extends FlxGroup {
         entity.engine = Engine.NULL;
         forEachSystem(s -> s.entityRemoved(entity));
         return entities.remove(entity);
+    }
+
+    public function entityComponentsUpdated(entity:Entity) {
+        forEachSystem(s -> s.entityComponentsUpdated(entity));
     }
 
     function forEachSystem(method:System->Void) {

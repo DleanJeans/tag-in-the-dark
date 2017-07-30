@@ -27,6 +27,7 @@ class Entity extends GroupComponent {
         components.add(component);
         setComponentToEntity(component);
         mapIfFirstSprite(component);
+        engine.entityComponentsUpdated(this);
         return this;
     }
 

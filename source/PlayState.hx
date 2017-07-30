@@ -1,11 +1,9 @@
 package;
 
-import flixel.FlxSprite;
-import flixel.FlxG;
 import flixel.FlxState;
 import ecs.*;
 import components.*;
-import events.*;
+import systems.*;
 
 class PlayState extends FlxState {
 	var engine:Engine;
@@ -13,13 +11,12 @@ class PlayState extends FlxState {
 	var player2:Entity;
 	var wall:Entity;
 
-	var physics:CirclePhysics;
-
 	override public function create() {
 		bgColor = G.WOOD;
 
 		engine = new Engine();
 		engine.addSystem(new CirclePhysics());
+		engine.addSystem(new BoxPhysics());
 		add(engine);
 
 		player1 = createPlayer();
@@ -30,11 +27,15 @@ class PlayState extends FlxState {
 		player2 = createPlayer();
 		player2.addComponent(new ArrowsInput());
 		player2.sprite.screenCenter();
+
+		var wall = engine.createEntity();
+		wall.addComponent(new WallSprite(100, 100));
+		wall.sprite.immovable = true;
 	}
 
 	function createPlayer():Entity {
 		return engine.createEntity()
-		.addComponent(new CircleSprite(G.GREEN))
+		.addComponent(new CircleSprite())
 		.addComponent(new Movement());
 	}
 

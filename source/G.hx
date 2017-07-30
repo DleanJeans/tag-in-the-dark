@@ -7,8 +7,8 @@ class G {
 
     public static var FROZEN_TIME = 3;
 
-    public static var GREEN = 0xff00e676;
-    public static var RED = 0xffff5252;
-    public static var WOOD = 0xffa0522d;
-    public static var ICE = 0xffb2ebf2;
+    public static inline var GREEN = 0xff00e676;
+    public static inline var RED = 0xffff5252;
+    public static inline var WOOD = 0xffa0522d;
+    public static inline var ICE = 0xffb2ebf2;
 }

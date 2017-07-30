@@ -1,18 +1,15 @@
-package;
+package systems;
 
 import components.CircleSprite;
 import ecs.System;
 import flixel.math.FlxMath;
 import flixel.FlxG;
 import flixel.FlxSprite;
-import flixel.group.FlxSpriteGroup;
 import events.EventCollideEntity;
 import ecs.Entity;
 
 class CirclePhysics extends System {
-    var sprites = new FlxSpriteGroup();
-
-    override public function entityAdded(entity:Entity) {
+    override function addEntityIfHasSpriteComponent(entity:Entity) {
         if (entity.hasComponent(CircleSprite))
             sprites.add(entity.sprite);
     }
