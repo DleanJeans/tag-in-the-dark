@@ -1,9 +1,11 @@
 package;
 
-import flixel.FlxState;
+import flixel.FlxCamera.FlxCameraFollowStyle;
+import flixel.*;
 import ecs.*;
 import components.*;
 import systems.*;
+import map.*;
 
 class PlayState extends FlxState {
 	var engine:Engine;
@@ -12,12 +14,16 @@ class PlayState extends FlxState {
 	var wall:Entity;
 
 	override public function create() {
-		bgColor = G.WOOD;
+		bgColor = G.GRASS;
 
-		engine = new Engine();
+		engine = G.engine;
+
 		engine.addSystem(new PlayerPhysics());
 		engine.addSystem(new BoxPhysics());
+		engine.addSystem(new SpriteBound());
 		add(engine);
+
+		HouseCreator.createHouse();
 
 		player1 = createPlayer();
 		player1
@@ -28,8 +34,7 @@ class PlayState extends FlxState {
 		player2.addComponent(new ArrowsInput());
 		player2.sprite.screenCenter();
 
-		var wall = engine.createEntity();
-		wall.addComponent(new WallSprite(300, 100));
+		FlxG.camera.follow(player2.sprite, FlxCameraFollowStyle.TOPDOWN);
 	}
 
 	function createPlayer():Entity {
@@ -40,6 +45,5 @@ class PlayState extends FlxState {
 
 	override public function update(elapsed:Float) {
 		super.update(elapsed);
-		
 	}
 }

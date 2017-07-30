@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="2017.07.25" orientation="orthogonal" renderorder="left-up" width="60" height="100" tilewidth="20" tileheight="20" nextobjectid="164">
+ <objectgroup name="Design" locked="1">
+  <object id="1" x="1040" y="1860">
+   <properties>
+    <property name="Color" type="color" value="#ff000000"/>
+   </properties>
+   <polygon points="0,0 -280,0 -280,-80 -360,-80 -360,-440 0,-440"/>
+  </object>
+  <object id="4" x="980" y="1800">
+   <polygon points="0,0 -160,0 -160,-320 0,-320"/>
+  </object>
+  <object id="6" x="740" y="1560" width="40" height="40">
+   <ellipse/>
+  </object>
+  <object id="7" x="680" y="1780">
+   <properties>
+    <property name="Color" type="color" value="#ff000000"/>
+   </properties>
+   <polygon points="0,0 -320,0 -320,120 80,120 80,0"/>
+  </object>
+  <object id="12" x="1040" y="1420">
+   <polygon points="0,0 -360,0 -360,-360 -280,-360 0,-360"/>
+  </object>
+  <object id="11" x="600" y="1780">
+   <polygon points="0,0 -80,0 -80,-80 0,0"/>
+  </object>
+  <object id="15" x="1040" y="1340">
+   <polygon points="0,0 -200,0 -200,-120 0,-120"/>
+  </object>
+  <object id="17" x="680" y="1100">
+   <polygon points="0,0 80,0 0,80"/>
+  </object>
+  <object id="18" x="720" y="1060">
+   <polygon points="0,0 0,-80 80,0"/>
+  </object>
+  <object id="19" x="1000" y="860">
+   <polygon points="0,0 0,80 -80,0"/>
+  </object>
+  <object id="20" x="1040" y="940" rotation="360">
+   <polygon points="0,-440 -360,-440 -360,-80 -280,-80 0,-80"/>
+  </object>
+  <object id="21" x="1040" y="700">
+   <polygon points="0,0 -200,0 -200,-120 0,-120"/>
+  </object>
+  <object id="22" x="680" y="720">
+   <polygon points="0,0 40,0 40,-160 0,-160"/>
+  </object>
+  <object id="23" x="680" y="780">
+   <polygon points="0,80 80,80 0,0"/>
+  </object>
+  <object id="24" x="1040" y="1060">
+   <polygon points="0,0 0,-80 -160,-80 -160,0"/>
+  </object>
+  <object id="25" x="1040" y="500">
+   <polygon points="0,0 -200,0 -200,-40 -40,-40 -40,-200 0,-200"/>
+  </object>
+  <object id="26" x="1040" y="500">
+   <polygon points="0,0 0,-320 -360,-320 -360,0"/>
+  </object>
+  <object id="27" x="680" y="180">
+   <polygon points="0,0 160,0 160,80 0,80"/>
+  </object>
+  <object id="28" x="680" y="460">
+   <polygon points="0,0 80,0 0,-80"/>
+  </object>
+  <object id="29" x="680" y="180">
+   <polygon points="0,220 -160,220 -160,580 -520,580 -520,1600 -320,1600 0,1600"/>
+  </object>
+  <object id="30" x="520" y="760">
+   <polygon points="0,0 -360,0 -360,-360 0,-360"/>
+  </object>
+  <object id="31" x="160" y="600">
+   <polygon points="0,0 0,-120 200,-120 200,0"/>
+  </object>
+  <object id="33" x="520" y="720">
+   <polygon points="0,0 -80,0 0,-80"/>
+  </object>
+  <object id="34" x="680" y="1500">
+   <polygon points="0,0 80,0 0,80"/>
+  </object>
+  <object id="35" x="160" y="1660">
+   <polygon points="0,0 40,0 40,-240 0,-240"/>
+  </object>
+  <object id="36" x="320" y="1460">
+   <polygon points="0,0 0,160 80,160 80,0"/>
+  </object>
+  <object id="37" x="480" y="1660">
+   <polygon points="-20,0 80,0 80,-360 -200,-360 -200,-260 -20,-260"/>
+  </object>
+  <object id="38" x="160" y="1140">
+   <polygon points="0,0 60,0 60,-180 180,-180 180,-240 0,-240"/>
+  </object>
+  <object id="39" x="300" y="1040">
+   <polygon points="0,0 0,80 200,80 200,0"/>
+  </object>
+  <object id="41" x="240" y="760">
+   <polygon points="0,0 0,140 -80,140 -80,0"/>
+  </object>
+  <object id="42" x="380" y="760">
+   <polygon points="0,0 0,40 40,40 40,0"/>
+  </object>
+  <object id="43" x="440" y="760">
+   <polygon points="0,0 0,40 40,40 40,0"/>
+  </object>
+  <object id="44" x="340" y="760">
+   <polygon points="0,0 0,80 -80,0"/>
+  </object>
+  <object id="46" x="680" y="400">
+   <polygon points="0,0 0,-140 -440,-140 -440,0"/>
+  </object>
+  <object id="47" x="640" y="400">
+   <polygon points="0,0 0,-80 -80,0"/>
+  </object>
+  <object id="48" x="500" y="820">
+   <polygon points="0,80 0,0 -80,80"/>
+  </object>
+  <object id="69" x="1040" y="860">
+   <polygon points="0,0 -360,0 -360,200 0,200"/>
+  </object>
+  <object id="97" x="520" y="760">
+   <polygon points="0,0 0,140 -360,140 -360,0"/>
+  </object>
+  <object id="103" x="160" y="1420" width="40" height="240"/>
+  <object id="105" x="680" y="1200" width="40" height="160"/>
+  <object id="107" x="480" y="460" width="40" height="160"/>
+ </objectgroup>
+ <objectgroup name="Floor" visible="0">
+  <object id="151" x="360" y="1780">
+   <properties>
+    <property name="color" type="color" value="#ff3e2723"/>
+   </properties>
+   <polygon points="0,0 0,120 400,120 400,0"/>
+  </object>
+  <object id="153" x="680" y="1780">
+   <properties>
+    <property name="color" type="color" value="#ff3e2723"/>
+   </properties>
+   <polygon points="0,0 -520,0 -520,-880 -160,-880 -160,-1380 0,-1380"/>
+  </object>
+  <object id="154" x="1040" y="1420">
+   <properties>
+    <property name="color" type="color" value="#ff3e2723"/>
+   </properties>
+   <polygon points="0,0 -360,0 -360,-360 0,-360"/>
+  </object>
+  <object id="156" x="1040" y="1060">
+   <properties>
+    <property name="color" type="color" value="#ffe5e5e5"/>
+   </properties>
+   <polygon points="0,0 -360,0 -360,-200 0,-200"/>
+  </object>
+  <object id="157" x="1040" y="860">
+   <properties>
+    <property name="color" type="color" value="#ff3e2723"/>
+   </properties>
+   <polygon points="0,0 -360,0 -360,-360 0,-360"/>
+  </object>
+  <object id="158" x="1040" y="500">
+   <properties>
+    <property name="color" type="color" value="#ff3e2723"/>
+   </properties>
+   <polygon points="0,0 0,-320 -360,-320 -360,0"/>
+  </object>
+  <object id="159" x="680" y="400">
+   <properties>
+    <property name="color" type="color" value="#ff3e2723"/>
+   </properties>
+   <polygon points="0,0 -440,0 -440,-140 0,-140"/>
+  </object>
+  <object id="160" x="520" y="900">
+   <properties>
+    <property name="color" type="color" value="#ffe5e5e5"/>
+   </properties>
+   <polygon points="0,0 -360,0 -360,-140 0,-140"/>
+  </object>
+  <object id="161" x="520" y="760">
+   <properties>
+    <property name="color" type="color" value="#ff3e2723"/>
+   </properties>
+   <polygon points="0,0 -360,0 -360,-360 0,-360"/>
+  </object>
+  <object id="162" x="1040" y="1420">
+   <properties>
+    <property name="color" type="color" value="#ff7d7d7d"/>
+   </properties>
+   <polygon points="0,0 -360,0 -360,360 -280,360 -280,440 -240,440 -240,580 -40,580 -40,440 0,440"/>
+  </object>
+ </objectgroup>
+ <objectgroup name="Walls" visible="0">
+  <object id="56" x="680" y="1580">
+   <polyline points="0,0 0,200 80,200 80,280"/>
+  </object>
+  <object id="58" x="1040" y="1860">
+   <polyline points="0,0 0,-440 -360,-440 -360,-360"/>
+  </object>
+  <object id="59" x="680" y="1420">
+   <polyline points="0,0 0,-240"/>
+  </object>
+  <object id="63" x="1040" y="1420">
+   <polyline points="0,0 0,-360 -240,-360"/>
+  </object>
+  <object id="64" x="680" y="1060">
+   <polyline points="0,0 0,40"/>
+  </object>
+  <object id="67" x="962" y="860">
+   <polyline points="38,0 78,0 78,200"/>
+  </object>
+  <object id="68" x="880" y="860">
+   <polyline points="40,0 -200,0 -200,200 -160,200"/>
+  </object>
+  <object id="70" x="680" y="820">
+   <polyline points="0,0 0,40 240,40"/>
+  </object>
+  <object id="71" x="1000" y="860">
+   <polyline points="0,0 40,0 40,-360 -320,-360 -320,-120"/>
+  </object>
+  <object id="72" x="1040" y="500">
+   <polyline points="0,0 0,-320 -360,-320 -360,-100 -400,-100"/>
+  </object>
+  <object id="73" x="680" y="460">
+   <polyline points="0,20 0,40"/>
+  </object>
+  <object id="74" x="680" y="1780">
+   <polyline points="0,0 -80,0"/>
+  </object>
+  <object id="75" x="520" y="640">
+   <polyline points="0,0 0,-240 -360,-240 -360,120 -260,120"/>
+  </object>
+  <object id="76" x="500" y="760">
+   <polyline points="-160,0 20,0 20,-40"/>
+  </object>
+  <object id="77" x="560" y="400">
+   <polyline points="0,0 -40,0"/>
+  </object>
+  <object id="78" x="520" y="760">
+   <polyline points="0,0 0,140 -20,140"/>
+  </object>
+  <object id="79" x="420" y="900">
+   <polyline points="0,0 -260,0 -260,-140"/>
+  </object>
+  <object id="80" x="160" y="900">
+   <polyline points="0,0 0,880 360,880"/>
+  </object>
+ </objectgroup>
+ <objectgroup name="Objects">
+  <object id="81" name="Car" type="Solid" x="820" y="1480" width="160" height="320">
+   <properties>
+    <property name="color" type="color" value="#ff313131"/>
+   </properties>
+  </object>
+  <object id="83" name="Bed" x="840" y="1220" width="200" height="120">
+   <properties>
+    <property name="color" type="color" value="#ffdc0000"/>
+   </properties>
+  </object>
+  <object id="84" name="Bed" x="160" y="480" width="200" height="120">
+   <properties>
+    <property name="color" type="color" value="#ffdc0000"/>
+   </properties>
+  </object>
+  <object id="85" name="Bed" x="840" y="580" width="200" height="120">
+   <properties>
+    <property name="color" type="color" value="#ffdc0000"/>
+   </properties>
+  </object>
+  <object id="86" name="Bathtub" x="160" y="760" width="80" height="140"/>
+  <object id="88" name="Bathtub" x="880" y="980" width="160" height="80"/>
+  <object id="89" name="Toilet" x="380" y="760" width="40" height="40"/>
+  <object id="90" name="Sink" x="440" y="760" width="40" height="40"/>
+  <object id="93" name="Table" x="320" y="1460" width="80" height="160">
+   <properties>
+    <property name="color" type="color" value="#ff7f5538"/>
+   </properties>
+  </object>
+  <object id="95" name="Table" x="300" y="1040" width="200" height="80">
+   <properties>
+    <property name="color" type="color" value="#ff7f5538"/>
+   </properties>
+  </object>
+  <object id="99" name="CouchBack" type="HalfSolid" x="280" y="1300" width="280" height="40">
+   <properties>
+    <property name="color" type="color" value="#ffc50000"/>
+   </properties>
+  </object>
+  <object id="102" name="CouchBack" type="HalfSolid" x="520" y="1340" width="40" height="320">
+   <properties>
+    <property name="color" type="color" value="#ffc50000"/>
+   </properties>
+  </object>
+  <object id="111" name="Cabinet" x="160" y="1420" width="40" height="240">
+   <properties>
+    <property name="color" type="color" value="#ffb06d37"/>
+   </properties>
+  </object>
+  <object id="113" name="CouchSeat" type="Slow" x="280" y="1340" width="240" height="60">
+   <properties>
+    <property name="color" type="color" value="#ffdf0000"/>
+   </properties>
+  </object>
+  <object id="114" name="CouchSeat" type="Slow" x="460" y="1400" width="60" height="260">
+   <properties>
+    <property name="color" type="color" value="#ffdf0000"/>
+   </properties>
+  </object>
+  <object id="116" name="Cabinet" x="680" y="1200" width="40" height="160">
+   <properties>
+    <property name="color" type="color" value="#ffb06d37"/>
+   </properties>
+  </object>
+  <object id="118" name="Cabinet" x="680" y="560" width="40" height="160">
+   <properties>
+    <property name="color" type="color" value="#ffb06d37"/>
+   </properties>
+  </object>
+  <object id="119" name="Cabinet" x="480" y="460" width="40" height="160">
+   <properties>
+    <property name="color" type="color" value="#ffb06d37"/>
+   </properties>
+  </object>
+  <object id="121" name="Table" x="680" y="180" width="160" height="80">
+   <properties>
+    <property name="color" type="color" value="#ff7f5538"/>
+   </properties>
+  </object>
+  <object id="125" name="Bookshelf" x="840" y="460" width="200" height="40">
+   <properties>
+    <property name="color" type="color" value="#ff4c2d08"/>
+   </properties>
+  </object>
+  <object id="126" name="Bookshelf" x="1000" y="300" width="40" height="160">
+   <properties>
+    <property name="color" type="color" value="#ff4c2d08"/>
+   </properties>
+  </object>
+  <object id="131" name="Cabinet" x="160" y="900" width="180" height="60">
+   <properties>
+    <property name="color" type="color" value="#ffb06d37"/>
+   </properties>
+  </object>
+  <object id="132" name="Cabinet" x="160" y="960" width="60" height="180">
+   <properties>
+    <property name="color" type="color" value="#ffb06d37"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

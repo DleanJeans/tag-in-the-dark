@@ -16,10 +16,6 @@ class BoxPhysics extends PhysicsSystem {
     override function preprocess(sprite1:FlxSprite, sprite2:FlxSprite) {
         super.preprocess(sprite1, sprite2);
 
-        return oneIsNotSpriteType(PlayerSprite);
-    }
-
-    function oneEntityHasComponent(component:Class<Component>) {
-        return entity1.hasComponent(component) || entity2.hasComponent(component);
+        return oneIsNotSpriteType(PlayerSprite) && oneIsNotSpriteType(WallSprite);
     }
 }

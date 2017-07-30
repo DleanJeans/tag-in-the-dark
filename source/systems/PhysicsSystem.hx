@@ -49,7 +49,7 @@ class PhysicsSystem extends System {
         entity1.notify(new EventCollision(entity2, sprite2));
         entity2.notify(new EventCollision(entity1, sprite1));
 	}
-
+    
     function bothSpriteAreType(type:Class<FlxSprite>) {
         return isSpriteType(sprite1, type) && isSpriteType(sprite2, type);
     }
