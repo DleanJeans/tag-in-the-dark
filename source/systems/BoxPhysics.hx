@@ -1,23 +1,25 @@
 package systems;
 
+import ecs.Entity;
+import ecs.Component;
+import components.WallSprite;
 import flixel.FlxObject;
-import components.CircleSprite;
+import components.PlayerSprite;
 import flixel.FlxSprite;
-import flixel.FlxG;
-import ecs.System;
 
-class BoxPhysics extends System {
-    override public function update(elapsed:Float) {
-    	super.update(elapsed);
-        
-        FlxG.overlap(sprites, sprites, FlxObject.separate, filterTwoCircleSprites);
+class BoxPhysics extends PhysicsSystem {
+    override function notify(sprite1:FlxSprite, sprite2:FlxSprite) {
+        super.notify(sprite1, sprite2);
+        FlxObject.separate(sprite1, sprite2);
     }
 
-    function filterTwoCircleSprites(sprite1:FlxSprite, sprite2:FlxSprite) {
-        return isNotCircleSprite(sprite1) || isNotCircleSprite(sprite2);
+    override function preprocess(sprite1:FlxSprite, sprite2:FlxSprite) {
+        super.preprocess(sprite1, sprite2);
+
+        return oneIsNotSpriteType(PlayerSprite);
     }
 
-    function isNotCircleSprite(sprite:FlxSprite) {
-        return !Std.is(sprite, CircleSprite);
+    function oneEntityHasComponent(component:Class<Component>) {
+        return entity1.hasComponent(component) || entity2.hasComponent(component);
     }
 }

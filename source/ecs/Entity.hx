@@ -63,6 +63,10 @@ class Entity extends GroupComponent {
             spriteMap.remove(cast component);
     }
 
+    public function hasNoComponent(type:Class<Component>) {
+        return !hasComponent(type);
+    }
+
     public function hasComponent(type:Class<Component>) {
         for (c in components) {
             if (Std.is(c, type))

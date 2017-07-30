@@ -1,6 +1,12 @@
 package;
 
 class G {
+    public static var CIRCLE_RADIUS = 20;
+    public static var CIRCLE_DIAMETER = CIRCLE_RADIUS * 2;
+    public static var OUTLINE_THICKNESS = 2;
+
+    public static var WALL_THICKNESS = 8;
+
     public static var SPEED = 200;
     public static var GRAVITY = 500;
     public static var JUMP_SPEED = 400;

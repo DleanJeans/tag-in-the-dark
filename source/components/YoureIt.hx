@@ -1,6 +1,6 @@
 package components;
 
-import events.EventCollideEntity;
+import events.EventCollision;
 import ecs.EventData;
 import ecs.PrimitiveComponent;
 
@@ -14,11 +14,11 @@ class YoureIt extends PrimitiveComponent {
     }
 
     override public function receive(event:EventData) {
-        executeForEventType(event, EventCollideEntity, passThisComponent);
+        executeForEventType(event, EventCollision, passThisComponent);
     }
 
-    function passThisComponent(e:EventCollideEntity) {
-        if (entity.hasComponent(ShortFreezing)) return;
+    function passThisComponent(e:EventCollision) {
+        if (e.entity.hasNoComponent(PlayerSprite) || entity.hasComponent(ShortFreezing)) return;
 
         entity.removeComponent(this);
 

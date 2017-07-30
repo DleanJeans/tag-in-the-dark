@@ -15,7 +15,7 @@ class PlayState extends FlxState {
 		bgColor = G.WOOD;
 
 		engine = new Engine();
-		engine.addSystem(new CirclePhysics());
+		engine.addSystem(new PlayerPhysics());
 		engine.addSystem(new BoxPhysics());
 		add(engine);
 
@@ -29,13 +29,12 @@ class PlayState extends FlxState {
 		player2.sprite.screenCenter();
 
 		var wall = engine.createEntity();
-		wall.addComponent(new WallSprite(100, 100));
-		wall.sprite.immovable = true;
+		wall.addComponent(new WallSprite(300, 100));
 	}
 
 	function createPlayer():Entity {
 		return engine.createEntity()
-		.addComponent(new CircleSprite())
+		.addComponent(new PlayerSprite())
 		.addComponent(new Movement());
 	}
 

@@ -17,8 +17,12 @@ class System extends FlxBasic {
     }
 
     function addEntityIfHasSpriteComponent(entity:Entity) {
-        if (entity.hasComponent(SpriteComponent))
+        if (entityIsQualified(entity))
             sprites.add(entity.sprite);
+    }
+
+    function entityIsQualified(entity:Entity) {
+        return entity.hasComponent(SpriteComponent);
     }
 
     public function entityComponentsUpdated(entity:Entity) {
