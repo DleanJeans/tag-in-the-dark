@@ -1,7 +1,6 @@
 package map;
 
-import flixel.util.FlxColor;
-import ecs.SpriteComponent;
+import components.HouseObjectSprite;
 import flixel.addons.editors.tiled.*;
 
 class ObjectsCreator {
@@ -20,19 +19,7 @@ class ObjectsCreator {
 
     function createObjectsFromLayer() {
         for (object in objectsLayer.objects) {
-            var sprite = new SpriteComponent(object.x, object.y);
-            sprite.makeGraphic(object.width, object.height);
-            sprite.immovable = true;
-            if (object.properties.contains(G.COLOR_PROPERTY))
-                sprite.color = getColor(object);
-
-            var object = G.engine.createEntity().addComponent(sprite);
+            var entity = G.engine.createEntity().addComponent(new HouseObjectSprite(object));
         }
-    }
-
-    function getColor(object:TiledObject) {
-        var colorString = object.properties.get(G.COLOR_PROPERTY);
-        var colorInt = FlxColor.fromString(colorString);
-        return colorInt;
     }
 }

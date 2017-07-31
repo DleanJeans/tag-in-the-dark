@@ -29,12 +29,12 @@ class PlayState extends FlxState {
 		player1
 		.addComponent(new WASDInput())
 		.addComponent(new YoureIt());
+		player1.sprite.screenCenter();
 
 		player2 = createPlayer();
 		player2.addComponent(new ArrowsInput());
-		player2.sprite.screenCenter();
 
-		FlxG.camera.follow(player2.sprite, FlxCameraFollowStyle.TOPDOWN);
+		FlxG.camera.follow(player1.sprite, FlxCameraFollowStyle.TOPDOWN);
 	}
 
 	function createPlayer():Entity {

@@ -13,12 +13,13 @@ class System extends FlxBasic {
     }
 
     public function entityAdded(entity:Entity) {
-        addEntityIfHasSpriteComponent(entity);
+        keepEntityIfQualified(entity);
     }
 
-    function addEntityIfHasSpriteComponent(entity:Entity) {
+    function keepEntityIfQualified(entity:Entity) {
         if (entityIsQualified(entity))
             sprites.add(entity.sprite);
+        else sprites.remove(entity.sprite);
     }
 
     function entityIsQualified(entity:Entity) {
@@ -26,8 +27,10 @@ class System extends FlxBasic {
     }
 
     public function entityComponentsUpdated(entity:Entity) {
-        addEntityIfHasSpriteComponent(entity);
+        keepEntityIfQualified(entity);
     }
 
     public function entityRemoved(entity:Entity) {}
+
+    public function preUpdate() {}
 }

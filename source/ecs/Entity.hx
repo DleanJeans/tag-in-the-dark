@@ -8,6 +8,8 @@ import flixel.group.FlxGroup;
 class Entity extends GroupComponent {
     public static var NULL(default, null) = new Entity();
     public static var NULL_SPRITE(default, null) = new FlxSprite();
+    public static var NULL_COMPONENT(default, null) = new PrimitiveComponent();
+
     static var spriteMap:SpriteMap = new SpriteMap();
 
     public static function getEntityOfSprite(sprite:FlxSprite) {
@@ -25,10 +27,29 @@ class Entity extends GroupComponent {
 
     public function addComponent<T:(FlxBasic, Component)>(component:T):Entity {
         components.add(component);
+        setupAddedComponent(component);
+        return this;
+    }
+
+    function setupAddedComponent(component:Component) {
         setComponentToEntity(component);
         mapIfFirstSprite(component);
         engine.entityComponentsUpdated(this);
+    }
+
+    public function insertComponentBefore<T:(FlxBasic, Component)>(component:T, type:Class<T>):Entity {
+        var index = getComponentTypeIndex(type);
+        components.insert(index, component);
+        setupAddedComponent(component);
         return this;
+    }
+
+    function getComponentTypeIndex<T:(FlxBasic, Component)>(type:Class<T>) {
+        for (c in components) {
+            if (Std.is(c, type))
+                return components.members.indexOf(c);
+        }
+        return -1;
     }
 
     function setComponentToEntity(component:Component) {
@@ -44,6 +65,15 @@ class Entity extends GroupComponent {
     function isFirstSprite(component:Component) {
         return Std.is(component, FlxSprite) && 
         ((sprite == cast component) || (components.length == 0));
+    }
+
+    public function removeComponentType<T:(FlxBasic, Component)>(type:Class<T>) {
+        removeComponent(getComponentOfType(type));
+    }
+
+    function getComponentOfType<T:(FlxBasic, Component)>(type:Class<T>):T {
+        var index = getComponentTypeIndex(type);
+        return cast components.members[index];
     }
 
     public function removeComponent<T:(FlxBasic, Component)>(component:T):Entity {

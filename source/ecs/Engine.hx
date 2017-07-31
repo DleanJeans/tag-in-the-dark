@@ -63,4 +63,9 @@ class Engine extends FlxGroup {
     inline function twoGroupAdded() {
         return length >= 2;
     }
+
+    override public function update(elapsed:Float) {
+        systems.forEach(s -> s.preUpdate());
+    	super.update(elapsed);
+    }
 }

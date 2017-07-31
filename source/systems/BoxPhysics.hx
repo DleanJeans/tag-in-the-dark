@@ -16,6 +16,7 @@ class BoxPhysics extends PhysicsSystem {
     override function preprocess(sprite1:FlxSprite, sprite2:FlxSprite) {
         super.preprocess(sprite1, sprite2);
 
-        return oneIsNotSpriteType(PlayerSprite) && oneIsNotSpriteType(WallSprite);
+        return oneIsNotSpriteType(PlayerSprite) // don't notify 2 PlayerSprite colliding
+        && oneIsNotSpriteType(WallSprite); // don't notify 2 WallSprite colliding
     }
 }
