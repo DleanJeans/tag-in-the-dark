@@ -5,8 +5,8 @@ import ecs.EventData;
 import ecs.Entity;
 
 class EventCollision implements EventData {
-    public var entity:Entity;
-    public var sprite:FlxSprite;
+    public var entity(default, null):Entity;
+    public var sprite(default, null):FlxSprite;
 
     public function new(entity:Entity, sprite:FlxSprite) {
         this.entity = entity;

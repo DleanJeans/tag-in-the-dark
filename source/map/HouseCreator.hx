@@ -9,6 +9,7 @@ class HouseCreator {
         new FloorCreator().createFloor();
         new ObjectsCreator().createObjects();
         new WallsCreator().createWalls();
+        new PlayersCreator().createPlayers();
         setWorldBounds();
     }
 

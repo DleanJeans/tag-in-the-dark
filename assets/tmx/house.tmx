@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="2017.07.25" orientation="orthogonal" renderorder="left-up" width="60" height="100" tilewidth="20" tileheight="20" nextobjectid="168">
- <objectgroup name="Design" locked="1">
+<map version="1.0" tiledversion="2017.07.25" orientation="orthogonal" renderorder="left-up" width="60" height="100" tilewidth="20" tileheight="20" nextobjectid="173">
+ <objectgroup name="Design">
   <object id="1" x="1040" y="1860">
    <properties>
     <property name="Color" type="color" value="#ff000000"/>
@@ -9,9 +9,6 @@
   </object>
   <object id="4" x="980" y="1800">
    <polygon points="0,0 -160,0 -160,-320 0,-320"/>
-  </object>
-  <object id="6" x="740" y="1560" width="40" height="40">
-   <ellipse/>
   </object>
   <object id="7" x="680" y="1780">
    <properties>
@@ -373,6 +370,23 @@
    <properties>
     <property name="color" type="color" value="#ffffffff"/>
    </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Players">
+  <object id="168" name="Player 1" x="420" y="1500" width="40" height="40">
+   <ellipse/>
+  </object>
+  <object id="169" name="Player 2" x="400" y="1420" width="40" height="40">
+   <ellipse/>
+  </object>
+  <object id="170" name="Player 3" x="400" y="1580" width="40" height="40">
+   <ellipse/>
+  </object>
+  <object id="171" name="Player 4" x="320" y="1400" width="40" height="40">
+   <ellipse/>
+  </object>
+  <object id="172" name="Player 5" x="340" y="1640" width="40" height="40">
+   <ellipse/>
   </object>
  </objectgroup>
 </map>

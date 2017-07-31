@@ -37,6 +37,16 @@ class Entity extends GroupComponent {
         engine.entityComponentsUpdated(this);
     }
 
+    function setComponentToEntity(component:Component) {
+        component.entity = this;
+        component.added();
+    }
+
+    function mapIfFirstSprite(component:Component) {
+        if (isFirstSprite(component))
+            spriteMap.set(cast component, this);
+    }
+
     public function insertComponentBefore<T:(FlxBasic, Component)>(component:T, type:Class<T>):Entity {
         var index = getComponentTypeIndex(type);
         components.insert(index, component);
@@ -50,16 +60,6 @@ class Entity extends GroupComponent {
                 return components.members.indexOf(c);
         }
         return -1;
-    }
-
-    function setComponentToEntity(component:Component) {
-        component.entity = this;
-        component.added();
-    }
-
-    function mapIfFirstSprite(component:Component) {
-        if (isFirstSprite(component))
-            spriteMap.set(cast component, this);
     }
 
     function isFirstSprite(component:Component) {
@@ -80,6 +80,7 @@ class Entity extends GroupComponent {
         components.remove(component);
         unsetComponentEntity(component);
         removeIfFirstSprite(component);
+        engine.entityComponentsUpdated(this);
         return this;
     }
 

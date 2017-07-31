@@ -1,7 +1,6 @@
 package systems;
 
-import ecs.Entity;
-import ecs.Component;
+import components.HouseObjectSprite;
 import components.WallSprite;
 import flixel.FlxObject;
 import components.PlayerSprite;
@@ -17,6 +16,7 @@ class BoxPhysics extends PhysicsSystem {
         super.preprocess(sprite1, sprite2);
 
         return oneIsNotSpriteType(PlayerSprite) // don't notify 2 PlayerSprite colliding
-        && oneIsNotSpriteType(WallSprite); // don't notify 2 WallSprite colliding
+        && oneIsNotSpriteType(WallSprite) // don't notify 2 WallSprite colliding
+        && twoAreNotSpriteTypes(WallSprite, HouseObjectSprite);
     }
 }

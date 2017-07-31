@@ -1,5 +1,7 @@
 package components;
 
+import flixel.FlxG;
+import flixel.FlxCamera.FlxCameraFollowStyle;
 import events.EventCollision;
 import ecs.EventData;
 import ecs.PrimitiveComponent;
@@ -7,6 +9,8 @@ import ecs.PrimitiveComponent;
 class YoureIt extends PrimitiveComponent {
     override public function added() {
         sprite.color = G.RED;
+        FlxG.camera.follow(sprite, FlxCameraFollowStyle.TOPDOWN);
+        entity.addComponent(new ShortFreezing());
     }
 
     override public function removed() {
@@ -17,12 +21,15 @@ class YoureIt extends PrimitiveComponent {
         executeForEventType(event, EventCollision, passThisComponent);
     }
 
-    function passThisComponent(e:EventCollision) {
-        if (e.entity.hasNoComponent(PlayerSprite) || entity.hasComponent(ShortFreezing)) return;
+    function passThisComponent(other:EventCollision) {
+        if (other.entity.hasNoComponent(PlayerSprite) || entity.hasComponent(ShortFreezing)) return;
 
         entity.removeComponent(this);
-
-        e.entity.addComponent(this);
-        e.entity.addComponent(new ShortFreezing());
+        other.entity.addComponent(this);
+        #if flash
+        FlxG.sound.play(AssetPaths.Slap__mp3);
+        #else
+        FlxG.sound.play(AssetPaths.Slap__ogg);
+        #end
     }
 }

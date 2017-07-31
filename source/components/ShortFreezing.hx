@@ -14,7 +14,6 @@ class ShortFreezing extends BasicComponent {
     override public function removed() {
         sprite.color = G.RED;
         timer.destroy();
-        destroy();
     }
 
     function unfreeze(_) {
